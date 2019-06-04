@@ -1,0 +1,9 @@
+{
+  "presets": ["env", "stage-0", "react"],
+  "plugins": ["transform-runtime"]
+}
+
+// presets为语法配置,plugins为插件配置
+// - env：表示包含 babel-preset-es2015,babel-preset-es2016和babel-preset-es2017，意味着我们可以编写 ES6，ES7，和 ES8 的代码。 
+// - react：这个选项指明处理 React 的相关不能，不如 JSX。 
+// - stage-2：运行我们使用当前处于阶段 2 或更高阶段的 javascript 功能更多信息可以参考 TC39。
