@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "cross-env URL=ahqp  NODE_ENV=development  webpack-dev-server --progress --colors --inline --config build/webpack.dev.js",
-    "build": "webpack --config build/webpack.prod.js"
+    "build": "cross-env URL=ahqp NODE_ENV=development webpack --config build/webpack.prod.js"
   },
   "keywords": [],
   "author": "",
