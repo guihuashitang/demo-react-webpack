@@ -13,14 +13,15 @@ module.exports = {
     development_jshb:'"//test.jshubeiqp.sincebest.com/jshb/manager-web"' 
   }[process.env.URL],
   HTMLTITLE:{
-    ahqp:'大胡棋牌游戏运营系统3.0',
-    development_wbqp:'大胡棋牌游戏运营系统3.0',
+    ahqp:'"大胡棋牌游戏运营系统3.0"',
+    development_wbqp:'"大胡棋牌游戏运营系统3.0"',
     development_lamj: '"六安"',
-    development_bigwinner: '大赢家棋牌运营系统3.0',
-    production_bigwinner:'大赢家棋牌运营系统3.0',
-    development_bigwinner_app: '大赢家棋牌运营系统3.0',
-    production_bigwinner_app:'大赢家棋牌运营系统3.0',
-    production_slddz:'闪亮斗地主棋牌运营系统3.0',
-    development_jshb:'极速湖北棋牌运营系统3.0'
+    development_bigwinner: '"大赢家棋牌运营系统3.0"',
+    production_bigwinner:'"大赢家棋牌运营系统3.0"',
+    development_bigwinner_app: '"大赢家棋牌运营系统3.0"',
+    production_bigwinner_app:'"大赢家棋牌运营系统3.0"',
+    production_slddz:'"闪亮斗地主棋牌运营系统3.0"',
+    development_jshb:'"极速湖北棋牌运营系统3.0"'
   }[process.env.URL],
 }
+
