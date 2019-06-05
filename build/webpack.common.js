@@ -25,7 +25,8 @@ module.exports = {
     rules: [
       // 配置js/jsx语法解析
       { test: /\.js|jsx$/, use: 'babel-loader', exclude: /node_modules/ },
-      { test: /\.scss$/,  use: ["style-loader","css-loader","sass-loader"]}
+      { test: /\.scss$/,  use: ["style-loader","css-loader","sass-loader"]},
+      { test: /\.css$/,  use:['style-loader','css-loader']}
     ]
   },
   plugins: [
