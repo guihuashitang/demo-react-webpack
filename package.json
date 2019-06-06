@@ -6,16 +6,22 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "cross-env URL=ahqp  NODE_ENV=development  webpack-dev-server --progress --colors --inline --config build/webpack.dev.js",
-    "build": "cross-c URL=ahqp NODE_ENV=development webpack --config build/webpack.prod.js"
+    "build": "cross-env URL=ahqp NODE_ENV=production webpack --config build/webpack.prod.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "plugins": [
+    "react-hot-loader/babel"
+  ],
   "devDependencies": {
     "babel-loader": "^8.0.6",
     "clean-webpack-plugin": "^3.0.0",
     "cross-env": "^5.2.0",
+    "file-loader": "^4.0.0",
+    "react-hot-loader": "^4.9.0",
     "webpack": "^4.32.2",
+    "webpack-hot-middleware": "^2.25.0",
     "webpack-merge": "^4.2.1"
   },
   "dependencies": {
@@ -31,6 +37,7 @@
     "node-sass": "^4.12.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-hot-loader": "^4.9.0",
     "react-router": "^5.0.1",
     "react-router-dom": "^5.0.1",
     "redux": "^4.0.1",

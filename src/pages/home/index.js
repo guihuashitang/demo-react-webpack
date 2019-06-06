@@ -39,6 +39,7 @@ class Home extends React.Component {
   toggleCollapsed = () => {
     this.setState({
       collapsed: !this.state.collapsed,
+
     });
   };
 

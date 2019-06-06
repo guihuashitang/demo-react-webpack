@@ -1,6 +1,6 @@
 {
   "presets": ["env", "stage-0", "react"],
-  "plugins": ["transform-runtime"]
+  "plugins": ["transform-runtime","react-hot-loader/babel"]
 }
 
 // presets为语法配置,plugins为插件配置

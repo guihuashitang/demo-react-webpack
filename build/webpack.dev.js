@@ -16,9 +16,16 @@ function getIPAddress() {
 
 module.exports = merge(common, {
   mode: 'development',
+  entry: [
+    "react-hot-loader/patch",
+    "./src/index.js"
+  ],
   devServer: {
+    historyApiFallback: true,
     host: getIPAddress(),
-    port: 8878,
-    open: true
-  }
+    port: 8868,
+    open: true, 
+    hot: false,
+  },
+
 })
