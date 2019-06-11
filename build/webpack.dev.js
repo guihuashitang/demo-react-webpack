@@ -23,7 +23,7 @@ module.exports = merge(common, {
   devServer: {
     historyApiFallback: true,
     host: getIPAddress(),
-    port: 8868,
+    port: 8858,
     open: true, 
     hot: false,
   },

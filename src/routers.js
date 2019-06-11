@@ -11,6 +11,15 @@ const routerLists = [
     exact: true,
   },
   {
+    path: '/table',
+    name: '表格',
+    title:'表格',
+    component: require('./pages/table/table.js').default,
+    icon:'pie-chart',
+    role:['7'],
+    key: '7',
+  },
+  {
     path: '/happy',
     title:'娱乐',
     icon:'pie-chart',

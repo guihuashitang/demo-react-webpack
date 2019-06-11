@@ -3,7 +3,7 @@ import "./home.css";
 import AsideMenu from './AsideMenu/index'
 import routerLists from '../../routers.js'
 import { Route } from 'react-router-dom'
-import { Layout, Icon, Button, Row, Col, Menu, Dropdown, Avatar } from 'antd';
+import { Layout, Icon, Button, Row, Col, Menu, Dropdown, Avatar,Affix } from 'antd';
 import store from '../../reduxs/index';
 import {
   addTodo,
@@ -67,19 +67,21 @@ class Home extends React.Component {
             <AsideMenu status={this.state.collapsed}></AsideMenu>
           </Sider>
           <Layout className="layoutClass" style={{ marginLeft: !this.state.collapsed ? 256 : 80 }}>
-            <Header style={{ background: '#fff', padding: 0 }}>
-              <Row type="flex" justify="space-between" style={{ width: "100%" }}>
-                <Col span={3}>
-                  <Icon className="trigger" onClick={this.toggleCollapsed} type={this.state.collapsed ? 'menu-unfold' : 'menu-fold'} />
-                </Col>
-                <Col span={3}>
-                  <Dropdown overlay={menu} placement="bottomLeft">
-                    <div className="userName"><Avatar style={{ backgroundColor: '#87d068', marginRight: '5px' }} icon="user" />admin</div>
-                  </Dropdown>
-                </Col>
-              </Row>
-            </Header>
-            <Content style={{ margin: '24px 16px', }}>
+            {/* <Affix offsetTop={0} > */}
+              <Header className="headerClass" style={{ background: '#fff', padding: 0,width:!this.state.collapsed?"calc(100% - 256px)":"calc(100% - 80px)",  position:'fixed',zIndex:9999 }}>
+                <Row type="flex" justify="space-between" style={{ width: "100%" }}>
+                  <Col span={3}>
+                    <Icon className="trigger" onClick={this.toggleCollapsed} type={this.state.collapsed ? 'menu-unfold' : 'menu-fold'} />
+                  </Col>
+                  <Col span={3}>
+                    <Dropdown overlay={menu} placement="bottomLeft">
+                      <div className="userName"><Avatar style={{ backgroundColor: '#87d068', marginRight: '5px' }} icon="user" />admin</div>
+                    </Dropdown>
+                  </Col>
+                </Row>
+              </Header>
+            {/* </Affix> */}
+            <Content style={{ margin: '100px 16px 24px 16px',height:'auto',minHeight:'auto' }}>
               {
                 routerLists.map((item, index) => {
                   if (!item.children) {
