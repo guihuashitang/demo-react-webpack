@@ -164,7 +164,7 @@ class Tables extends React.Component {
         tags: ['cool', 'teacher'],
       },
     ];
-    
+
 
     return (
       <div className="table">
